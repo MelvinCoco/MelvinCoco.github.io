@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    
+}
+p{
+    font-size: small;
+}
+
+header {
+    
+    height: 90px;
+    display: flex;
+    background-color: white;
+}
+
+h1 {
+    top: 2%;
+    position: absolute; /* postulat de départ */
+    left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+}
+
+h1{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+}
+ul li a{
+    position: relative;
+    font-size: 1.40em;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--clr);
+}
+ul li a::before{
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 7px solid var(--clr);
+    -webkit-text-stroke: 1px var(--clr);
+}
+ul li a:hover::before{
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--clr));
+}
+header a {
+    text-decoration: none;
+}
+
+header img{
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+#conteneur-carte{
+    display: flex;
+    
+}
+#conteneur-carte2{
+    display: flex;
+}
+
+#PONG:hover, #DéveloppementWeb:hover, #Contact:hover{
+    width: 20%;
+    text-align: justify;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 8%;
+    margin-top: 3%;
+    border: 2px solid;
+    transition: 0.5s;
+    
+}
+#InstallationMachineVirtuelle:hover, #Gestion:hover, #BaseDeDonnées:hover{
+    width: 20%;
+    text-align: justify;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 8%;
+    margin-top: 3%;
+    background-color: white;
+    border: 2px solid;
+    transition: 0.5s;
+}
+
+
+#PONG, #DéveloppementWeb, #Contact {
+    width: 20%;
+    text-align: justify;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 8%;
+    margin-top: 5%;
+    background-color: white;
+    border: 2px solid;
+    border-radius: 10px;
+}
+#InstallationMachineVirtuelle, #Gestion, #BaseDeDonnées {
+    width: 20%;
+    text-align: justify;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 8%;
+    margin-top: 5%;
+    background-color: white;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+
+body {
+    background: #252839;
+}
+
+footer {
+    background-color: white;
+    height: 70px;
+}
+
+#MentionsLink {
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    height: 20px;
+    width: 10%;
+    color: black;
+}
+footer img {
+    margin-left: 37%;
+    width: 30px;
+    height: 30px;
+}
+.bouton {
+    width: 110px;
+    height: 30px;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 10px; 
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: 3px 3px 6px black;
+    outline: none;
+    margin-top: 20%;
+    text-decoration: none;
+    text-align: center;
+}
+
+.prem {
+    background: black;
+    background: linear-gradient(0deg, black 0%, black 100%);
+    border: none;
+}
+#PONG > p, #DéveloppementWeb > p, #Contact > p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#InstallationMachineVirtuelle > p, #Gestion > p, #BaseDeDonnées > p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.titre-bouton{
+    text-align: center;
+}
+
+#PONG img, #DéveloppementWeb img, #Contact img{
+    width: 150px;
+    height: 125px;
+}
+#InstallationMachineVirtuelle img, #Gestion img, #BaseDeDonnées img{
+    width: 150px;
+    height: 125px;
+}
+#box{
+    position: relative;
+    width: 300px;
+    height:400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(0,0,0,0.5);
+    overflow: hidden;
+    border-radius: 20px;
+}
+#box::before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 140%;
+    background: linear-gradient(#00ccff,#d400d4);
+    animation: animate 4s linear infinite;
+}
+#box::after{
+    content:'';
+    position: absolute;
+    inset:4px;
+    background: #0e1538;
+    border-radius: 16px;
+}
+@keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+#box h3{
+    position: relative;
+    color: #fff;
+    font-size: 10em;
+    z-index: 10;
+}
+@media (max-width: 1000px) {
+    #conteneur-carte{
+        flex-wrap: wrap;
+    }
+    #PONG, #DéveloppementWeb, #Contact {
+        width: 100%;
+        padding-left: 20%;
+        padding-right: 20%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    #PONG:hover, #DéveloppementWeb:hover, #Contact:hover{
+        width: 100%;
+        padding-left: 20%;
+        padding-right: 20%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 5%;
+        background-color: white;
+        border: 2px solid;
+    }
+
+    #PONG img, #DéveloppementWeb img, #Contact img{
+        padding-left: 0%;
+        width: 100%;
+        height: 100%;
+    }
+    #conteneur-carte2{
+        flex-wrap: wrap;
+    }
+    #InstallationMachineVirtuelle, #Gestion, #BaseDeDonnées {
+        width: 100%;
+        padding-left: 20%;
+        padding-right: 20%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    #InstallationMachineVirtuelle:hover, #Gestion:hover, #BaseDeDonnées:hover{
+        width: 100%;
+        padding-left: 20%;
+        padding-right: 20%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 5%;
+        background-color: white;
+        border: 2px solid;
+    }
+
+    #InstallationMachineVirtuelle img, #Gestion img, #BaseDeDonnées img{
+        padding-left: 0%;
+        width: 100%;
+        height: 100%;
+    }
+    footer{
+        height: 175px;
+    }
+}
+
+
+
+
+
+
+    
